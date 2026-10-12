@@ -1,0 +1,24 @@
+{
+ "app": "erpnext_austria",
+ "creation": "2026-10-12 14:47:19.214235",
+ "docstatus": 0,
+ "doctype": "Dock",
+ "idx": 0,
+ "items": [
+  {
+   "added": 0,
+   "hidden": 0,
+   "icon": "flag",
+   "link_to": "ERPNext Austria",
+   "link_type": "Sidebar",
+   "title": "Austria"
+  }
+ ],
+ "modified": "2026-10-12 14:47:19.214235",
+ "modified_by": "Administrator",
+ "mount_on": "erpnext",
+ "name": "erpnext_austria",
+ "owner": "Administrator",
+ "standard": 1,
+ "user": ""
+}
