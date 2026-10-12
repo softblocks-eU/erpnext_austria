@@ -9,11 +9,17 @@ readme = "README.md"
 dynamic = ["version"]
 dependencies = [
     # "frappe~=16.0.0" # Installed and managed by bench.
+    "zeep~=4.3.3",
+    "tenacity~=9.1.2",
 ]
 
 [build-system]
 requires = ["flit_core >=3.4,<4"]
 build-backend = "flit_core.buildapi"
+
+[tool.bench.frappe-dependencies]
+frappe = ">=16.0.0,<17.0.0"
+erpnext = ">=16.0.0,<17.0.0"
 
 # These dependencies are only installed when developer mode is enabled
 [tool.bench.dev-dependencies]
@@ -63,3 +69,8 @@ typing-modules = ["frappe.types.DF"]
 quote-style = "double"
 indent-style = "tab"
 docstring-code-format = true
+
+[project.urls]
+Homepage = "https://github.com/softblocks-eU/erpnext_austria"
+Repository = "https://github.com/softblocks-eU/erpnext_austria.git"
+"Bug Reports" = "https://github.com/softblocks-eU/erpnext_austria/issues"

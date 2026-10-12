@@ -8,7 +8,7 @@ app_license = "gpl-3.0"
 # Apps
 # ------------------
 
-# required_apps = []
+required_apps = ["frappe/erpnext"]
 
 # Each item in the list will be shown as an app in the apps page
 # add_to_apps_screen = [
@@ -99,12 +99,12 @@ app_include_js = [
 # ------------
 
 # before_install = "erpnext_austria.install.before_install"
-# after_install = "erpnext_austria.install.after_install"
+after_install = "erpnext_austria.install.after_install"
 
 # Uninstallation
 # ------------
 
-# before_uninstall = "erpnext_austria.uninstall.before_uninstall"
+before_uninstall = "erpnext_austria.uninstall.before_uninstall"
 # after_uninstall = "erpnext_austria.uninstall.after_uninstall"
 
 # Integration Setup
