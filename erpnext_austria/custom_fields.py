@@ -1,4 +1,9 @@
-from .constants import REGISTER_COURTS
+from .constants import (
+	REGISTER_COURTS,
+	ZM_INTRA_COMMUNITY_SUPPLY,
+	ZM_OTHER_SERVICE,
+	ZM_TRIANGULAR_TRANSACTION,
+)
 
 
 def _(message: str) -> str:
@@ -67,6 +72,19 @@ def get_custom_fields():
 				"translatable": 0,
 			}
 		],
+		"Sales Invoice": [
+			{
+				"label": _("Recapitulative Statement Type"),
+				"fieldtype": "Select",
+				"fieldname": "zm_type",
+				"options": get_zm_type_options(),
+				"fetch_from": "taxes_and_charges.zm_type",
+				"depends_on": "zm_type",
+				"read_only": 1,
+				"insert_after": "tax_exemption_reason",
+				"translatable": 0,
+			}
+		],
 		"Sales Taxes and Charges Template": [
 			{
 				"label": _("Tax Exemption Reason"),
@@ -74,6 +92,19 @@ def get_custom_fields():
 				"fieldname": "tax_exemption_reason",
 				"insert_after": "tax_category",
 				"translatable": 0,
-			}
+			},
+			{
+				"label": _("Recapitulative Statement Type"),
+				"fieldtype": "Select",
+				"fieldname": "zm_type",
+				"options": get_zm_type_options(),
+				"description": _("Invoices with this template are included in the recapitulative statement."),
+				"insert_after": "tax_exemption_reason",
+				"translatable": 0,
+			},
 		],
 	}
+
+
+def get_zm_type_options():
+	return "\n".join(["", ZM_INTRA_COMMUNITY_SUPPLY, ZM_OTHER_SERVICE, ZM_TRIANGULAR_TRANSACTION])

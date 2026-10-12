@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ERPNext Austria VERSION\n"
 "Report-Msgid-Bugs-To: contact@softblocks.at\n"
-"POT-Creation-Date: 2026-10-12 13:30+0000\n"
-"PO-Revision-Date: 2026-10-12 13:30+0000\n"
+"POT-Creation-Date: 2026-10-12 14:30+0000\n"
+"PO-Revision-Date: 2026-10-12 14:30+0000\n"
 "Last-Translator: contact@softblocks.at\n"
 "Language-Team: contact@softblocks.at\n"
 "MIME-Version: 1.0\n"
@@ -49,10 +49,12 @@ msgid "Amended From"
 msgstr ""
 
 #: erpnext_austria/erpnext_austria/report/summen__und_saldenliste/summen__und_saldenliste.js:32
+#: erpnext_austria/erpnext_austria/report/zusammenfassende_meldung/zusammenfassende_meldung.js:29
 msgid "April"
 msgstr ""
 
 #: erpnext_austria/erpnext_austria/report/summen__und_saldenliste/summen__und_saldenliste.js:36
+#: erpnext_austria/erpnext_austria/report/zusammenfassende_meldung/zusammenfassende_meldung.js:33
 msgid "August"
 msgstr ""
 
@@ -75,6 +77,7 @@ msgstr ""
 #: erpnext_austria/erpnext_austria/doctype/business_letter/business_letter.json
 #: erpnext_austria/erpnext_austria/doctype/vat_id_check/vat_id_check.json
 #: erpnext_austria/erpnext_austria/report/summen__und_saldenliste/summen__und_saldenliste.js:9
+#: erpnext_austria/erpnext_austria/report/zusammenfassende_meldung/zusammenfassende_meldung.js:8
 msgid "Company"
 msgstr ""
 
@@ -144,6 +147,7 @@ msgid "Debit until {0}"
 msgstr ""
 
 #: erpnext_austria/erpnext_austria/report/summen__und_saldenliste/summen__und_saldenliste.js:40
+#: erpnext_austria/erpnext_austria/report/zusammenfassende_meldung/zusammenfassende_meldung.js:37
 msgid "December"
 msgstr ""
 
@@ -179,11 +183,24 @@ msgid "Error"
 msgstr ""
 
 #: erpnext_austria/erpnext_austria/report/summen__und_saldenliste/summen__und_saldenliste.js:30
+#: erpnext_austria/erpnext_austria/report/zusammenfassende_meldung/zusammenfassende_meldung.js:27
 msgid "February"
+msgstr ""
+
+#: erpnext_austria/erpnext_austria/report/zusammenfassende_meldung/zusammenfassende_meldung.js:38
+msgid "First Quarter"
 msgstr ""
 
 #: erpnext_austria/erpnext_austria/report/summen__und_saldenliste/summen__und_saldenliste.js:17
 msgid "Fiscal Year"
+msgstr ""
+
+#: erpnext_austria/erpnext_austria/report/zusammenfassende_meldung/zusammenfassende_meldung.js:41
+msgid "Fourth Quarter"
+msgstr ""
+
+#: erpnext_austria/constants.py:61
+msgid "Intra-Community Supply"
 msgstr ""
 
 #: erpnext_austria/erpnext_austria/doctype/vat_id_check/vat_id_check_list.js:8
@@ -195,20 +212,27 @@ msgstr ""
 msgid "Invalid Input"
 msgstr ""
 
+#: erpnext_austria/custom_fields.py:101
+msgid "Invoices with this template are included in the recapitulative statement."
+msgstr ""
+
 #. Label of the is_valid (Check) field in DocType 'VAT ID Check'
 #: erpnext_austria/erpnext_austria/doctype/vat_id_check/vat_id_check.json
 msgid "Is Valid"
 msgstr ""
 
 #: erpnext_austria/erpnext_austria/report/summen__und_saldenliste/summen__und_saldenliste.js:29
+#: erpnext_austria/erpnext_austria/report/zusammenfassende_meldung/zusammenfassende_meldung.js:26
 msgid "January"
 msgstr ""
 
 #: erpnext_austria/erpnext_austria/report/summen__und_saldenliste/summen__und_saldenliste.js:35
+#: erpnext_austria/erpnext_austria/report/zusammenfassende_meldung/zusammenfassende_meldung.js:32
 msgid "July"
 msgstr ""
 
 #: erpnext_austria/erpnext_austria/report/summen__und_saldenliste/summen__und_saldenliste.js:34
+#: erpnext_austria/erpnext_austria/report/zusammenfassende_meldung/zusammenfassende_meldung.js:31
 msgid "June"
 msgstr ""
 
@@ -233,10 +257,12 @@ msgid "Load From Template"
 msgstr ""
 
 #: erpnext_austria/erpnext_austria/report/summen__und_saldenliste/summen__und_saldenliste.js:31
+#: erpnext_austria/erpnext_austria/report/zusammenfassende_meldung/zusammenfassende_meldung.js:28
 msgid "March"
 msgstr ""
 
 #: erpnext_austria/erpnext_austria/report/summen__und_saldenliste/summen__und_saldenliste.js:33
+#: erpnext_austria/erpnext_austria/report/zusammenfassende_meldung/zusammenfassende_meldung.js:30
 msgid "May"
 msgstr ""
 
@@ -245,15 +271,21 @@ msgid "Month"
 msgstr ""
 
 #: erpnext_austria/erpnext_austria/report/summen__und_saldenliste/summen__und_saldenliste.js:39
+#: erpnext_austria/erpnext_austria/report/zusammenfassende_meldung/zusammenfassende_meldung.js:36
 msgid "November"
 msgstr ""
 
 #: erpnext_austria/erpnext_austria/report/summen__und_saldenliste/summen__und_saldenliste.js:38
+#: erpnext_austria/erpnext_austria/report/zusammenfassende_meldung/zusammenfassende_meldung.js:35
 msgid "October"
 msgstr ""
 
 #: erpnext_austria/custom/sales.py:17
 msgid "Only the most recent {0} within the same series can be deleted to avoid gaps in numbering."
+msgstr ""
+
+#: erpnext_austria/constants.py:62
+msgid "Other Service"
 msgstr ""
 
 #. Label of the party (Dynamic Link) field in DocType 'VAT ID Check'
@@ -276,6 +308,10 @@ msgstr ""
 msgid "Party VAT ID"
 msgstr ""
 
+#: erpnext_austria/erpnext_austria/report/zusammenfassende_meldung/zusammenfassende_meldung.js:23
+msgid "Period"
+msgstr ""
+
 #. Option for the 'Status' (Select) field in DocType 'VAT ID Check'
 #: erpnext_austria/erpnext_austria/doctype/vat_id_check/vat_id_check.json
 #: erpnext_austria/erpnext_austria/doctype/vat_id_check/vat_id_check_list.js:10
@@ -293,6 +329,10 @@ msgstr ""
 msgid "Preview"
 msgstr ""
 
+#: erpnext_austria/custom_fields.py:77 erpnext_austria/custom_fields.py:97
+msgid "Recapitulative Statement Type"
+msgstr ""
+
 #. Label of the recipient_column (Column Break) field in DocType 'Business
 #. Letter'
 #: erpnext_austria/erpnext_austria/doctype/business_letter/business_letter.json
@@ -305,19 +345,19 @@ msgstr ""
 msgid "Reference"
 msgstr ""
 
-#: erpnext_austria/custom_fields.py:45
+#: erpnext_austria/custom_fields.py:50
 msgid "Register Court"
 msgstr ""
 
-#: erpnext_austria/custom_fields.py:13
+#: erpnext_austria/custom_fields.py:18
 msgid "Register Information"
 msgstr ""
 
-#: erpnext_austria/custom_fields.py:33
+#: erpnext_austria/custom_fields.py:38
 msgid "Register Number"
 msgstr ""
 
-#: erpnext_austria/custom_fields.py:20
+#: erpnext_austria/custom_fields.py:25
 msgid "Register Type"
 msgstr ""
 
@@ -364,6 +404,10 @@ msgstr ""
 msgid "Sales User"
 msgstr ""
 
+#: erpnext_austria/erpnext_austria/report/zusammenfassende_meldung/zusammenfassende_meldung.js:39
+msgid "Second Quarter"
+msgstr ""
+
 #. Label of the column_break_ybiq (Column Break) field in DocType 'Business
 #. Letter'
 #: erpnext_austria/erpnext_austria/doctype/business_letter/business_letter.json
@@ -371,6 +415,7 @@ msgid "Sender"
 msgstr ""
 
 #: erpnext_austria/erpnext_austria/report/summen__und_saldenliste/summen__und_saldenliste.js:37
+#: erpnext_austria/erpnext_austria/report/zusammenfassende_meldung/zusammenfassende_meldung.js:34
 msgid "September"
 msgstr ""
 
@@ -396,6 +441,10 @@ msgstr ""
 msgid "Subject (Preview)"
 msgstr ""
 
+#: erpnext_austria/erpnext_austria/report/zusammenfassende_meldung/zusammenfassende_meldung.py:108
+msgid "Sum of Taxable Amounts in Euro"
+msgstr ""
+
 #. Name of a report
 #: erpnext_austria/erpnext_austria/report/summen__und_saldenliste/summen__und_saldenliste.json
 msgid "Summen- und Saldenliste"
@@ -409,7 +458,7 @@ msgstr ""
 msgid "System Manager"
 msgstr ""
 
-#: erpnext_austria/custom_fields.py:61 erpnext_austria/custom_fields.py:72
+#: erpnext_austria/custom_fields.py:66 erpnext_austria/custom_fields.py:90
 msgid "Tax Exemption Reason"
 msgstr ""
 
@@ -424,6 +473,18 @@ msgstr ""
 #: erpnext_austria/erpnext_austria/doctype/vat_id_check/vat_id_check.py:19
 #: erpnext_austria/erpnext_austria/doctype/vat_id_check/vat_id_check.py:26
 msgid "The VAT ID in {0} is invalid."
+msgstr ""
+
+#: erpnext_austria/erpnext_austria/report/zusammenfassende_meldung/zusammenfassende_meldung.py:127
+msgid "The currency of {0} is {1}. The recapitulative statement is reported in Euro."
+msgstr ""
+
+#: erpnext_austria/erpnext_austria/report/zusammenfassende_meldung/zusammenfassende_meldung.py:135
+msgid "These invoices have a recapitulative statement type, but no VAT ID of another EU member state. They are not included: {0}"
+msgstr ""
+
+#: erpnext_austria/erpnext_austria/report/zusammenfassende_meldung/zusammenfassende_meldung.js:40
+msgid "Third Quarter"
 msgstr ""
 
 #. Label of the trader_city (Data) field in DocType 'VAT ID Check'
@@ -466,8 +527,16 @@ msgstr ""
 msgid "Trader Street Match"
 msgstr ""
 
+#: erpnext_austria/constants.py:63
+msgid "Triangular Transaction"
+msgstr ""
+
 #: erpnext_austria/erpnext_austria/doctype/business_letter/business_letter.js:47
 msgid "Unsaved changes. Save the document first to get a preview."
+msgstr ""
+
+#: erpnext_austria/erpnext_austria/report/zusammenfassende_meldung/zusammenfassende_meldung.py:105
+msgid "VAT ID"
 msgstr ""
 
 #. Name of a DocType
@@ -479,8 +548,17 @@ msgstr ""
 msgid "Valid"
 msgstr ""
 
+#: erpnext_austria/erpnext_austria/report/zusammenfassende_meldung/zusammenfassende_meldung.js:16
+msgid "Year"
+msgstr ""
+
 #: erpnext_austria/public/js/erpnext_austria/business_letter.js:7
 msgid "You can use {0} in the Subject and Content fields for dynamic values.<br><br>All address details are available under the <code>address</code> object (e.g., <code>{{ address.city }}</code>), contact details under the <code>contact</code> object (e.g., <code>{{ contact.first_name }}</code>), and any specific information related to the dynamically linked document under the <code>reference</code> object (e.g., <code>{{ reference.some_field }}</code>).<br><br>"
+msgstr ""
+
+#. Name of a report
+#: erpnext_austria/erpnext_austria/report/zusammenfassende_meldung/zusammenfassende_meldung.json
+msgid "Zusammenfassende Meldung"
 msgstr ""
 
 #: erpnext_austria/erpnext_austria/doctype/business_letter/business_letter.py:49

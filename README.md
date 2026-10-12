@@ -12,6 +12,21 @@ This app is based on [ERPNext Germany](https://github.com/alyf-de/erpnext_german
 - Tax exemption reason in **Sales Taxes and Charges Template**, **Quotation**, **Sales Order** and **Sales Invoice**
 - Create **Business Letters** from a template and print or email them to your customers or suppliers
 - Report _Summen- und Saldenliste_
+- Report _Zusammenfassende Meldung_ (recapitulative statement) for FinanzOnline
+
+### Zusammenfassende Meldung
+
+The report lists the lines of the recapitulative statement (form U 13) for a month or quarter: one line per VAT ID and transaction type with the sum of the net amounts in whole Euro. You can enter these lines in FinanzOnline.
+
+1. Set the _Recapitulative Statement Type_ in each **Sales Taxes and Charges Template** you use for customers in other EU member states: _Intra-Community Supply_, _Other Service_ or _Triangular Transaction_.
+2. **Sales Invoices** take the type from their template. Only submitted invoices with a type and a VAT ID of another EU member state are included. Credit notes reduce the sum.
+3. Open the report _Zusammenfassende Meldung_, select company, year and period.
+
+Simplifications:
+
+- The posting date of the invoice decides the reporting period.
+- An invoice has one transaction type. Put goods and services for the same customer on separate invoices.
+- Transfers of own goods (Verbringen), consignment stock (Konsignationslager) and corrections of a submitted statement are not supported.
 
 ### Installation
 
