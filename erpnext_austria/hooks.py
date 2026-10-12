@@ -36,6 +36,9 @@ app_license = "gpl-3.0"
 # include js, css files in header of desk.html
 # app_include_css = "/assets/erpnext_austria/css/erpnext_austria.css"
 # app_include_js = "/assets/erpnext_austria/js/erpnext_austria.js"
+app_include_js = [
+	"erpnext_austria.bundle.js",
+]
 
 # include js, css files in header of web template
 # web_include_css = "/assets/erpnext_austria/css/erpnext_austria.css"
@@ -162,6 +165,18 @@ app_license = "gpl-3.0"
 # 	}
 # }
 
+doc_events = {
+	"Quotation": {
+		"on_trash": "erpnext_austria.custom.sales.on_trash",
+	},
+	"Sales Order": {
+		"on_trash": "erpnext_austria.custom.sales.on_trash",
+	},
+	"Sales Invoice": {
+		"on_trash": "erpnext_austria.custom.sales.on_trash",
+	},
+}
+
 # Scheduled Tasks
 # ---------------
 
@@ -182,6 +197,10 @@ app_license = "gpl-3.0"
 # 		"erpnext_austria.tasks.monthly"
 # 	],
 # }
+
+scheduler_events = {
+	"all": ["erpnext_austria.tasks.all"],
+}
 
 # Testing
 # -------
@@ -261,7 +280,7 @@ app_license = "gpl-3.0"
 # ]
 
 # Automatically update python controller files with type annotations for this app.
-# export_python_type_annotations = True
+export_python_type_annotations = True
 
 # default_log_clearing_doctypes = {
 # 	"Logging DocType Name": 30  # days to retain logs
@@ -272,3 +291,25 @@ app_license = "gpl-3.0"
 # List of apps whose translatable strings should be excluded from this app's translations.
 # ignore_translatable_strings_from = []
 
+austria_custom_records = [
+	{
+		"doctype": "DocType Link",
+		"parent": "Customer",
+		"parentfield": "links",
+		"parenttype": "Customize Form",
+		"group": "Pre Sales",
+		"link_doctype": "VAT ID Check",
+		"link_fieldname": "party",
+		"custom": 1,
+	},
+	{
+		"doctype": "DocType Link",
+		"parent": "Supplier",
+		"parentfield": "links",
+		"parenttype": "Customize Form",
+		"group": "Vendor Evaluation",
+		"link_doctype": "VAT ID Check",
+		"link_fieldname": "party",
+		"custom": 1,
+	},
+]
