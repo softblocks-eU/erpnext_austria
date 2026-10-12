@@ -1,0 +1,493 @@
+# Translations template for ERPNext Austria.
+# Copyright (C) 2026 softblocks e.U.
+# This file is distributed under the same license as the ERPNext Austria project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: ERPNext Austria VERSION\n"
+"Report-Msgid-Bugs-To: contact@softblocks.at\n"
+"POT-Creation-Date: 2026-10-12 13:30+0000\n"
+"PO-Revision-Date: 2026-10-12 13:30+0000\n"
+"Last-Translator: contact@softblocks.at\n"
+"Language-Team: contact@softblocks.at\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.16.0\n"
+
+#: erpnext_austria/erpnext_austria/report/summen__und_saldenliste/summen__und_saldenliste.py:24
+msgid "Account"
+msgstr ""
+
+#. Label of the actual_trader_address (Small Text) field in DocType 'VAT ID
+#. Check'
+#: erpnext_austria/erpnext_austria/doctype/vat_id_check/vat_id_check.json
+msgid "Actual Trader Address"
+msgstr ""
+
+#. Label of the actual_trader_name (Data) field in DocType 'VAT ID Check'
+#: erpnext_austria/erpnext_austria/doctype/vat_id_check/vat_id_check.json
+msgid "Actual Trader Name"
+msgstr ""
+
+#. Label of the address (Link) field in DocType 'Business Letter'
+#. Label of the address_display (Small Text) field in DocType 'Business Letter'
+#: erpnext_austria/erpnext_austria/doctype/business_letter/business_letter.json
+msgid "Address"
+msgstr ""
+
+#. Description of the 'Prevent Gaps In Transaction Naming' (Check) field in
+#. DocType 'ERPNext Austria Settings'
+#: erpnext_austria/erpnext_austria/doctype/erpnext_austria_settings/erpnext_austria_settings.json
+msgid "Allow deletion of the most recent record only. Applies to <b>Quotation</b>, <b>Sales Order</b> and <b>Sales Invoice</b>."
+msgstr ""
+
+#. Label of the amended_from (Link) field in DocType 'Business Letter'
+#: erpnext_austria/erpnext_austria/doctype/business_letter/business_letter.json
+msgid "Amended From"
+msgstr ""
+
+#: erpnext_austria/erpnext_austria/report/summen__und_saldenliste/summen__und_saldenliste.js:32
+msgid "April"
+msgstr ""
+
+#: erpnext_austria/erpnext_austria/report/summen__und_saldenliste/summen__und_saldenliste.js:36
+msgid "August"
+msgstr ""
+
+#. Name of a DocType
+#: erpnext_austria/erpnext_austria/doctype/business_letter/business_letter.json
+msgid "Business Letter"
+msgstr ""
+
+#. Name of a DocType
+#: erpnext_austria/erpnext_austria/doctype/business_letter_template/business_letter_template.json
+msgid "Business Letter Template"
+msgstr ""
+
+#: erpnext_austria/custom/sales.py:20
+msgid "Cannot delete this transaction"
+msgstr ""
+
+#. Label of the company (Link) field in DocType 'Business Letter'
+#. Label of the company (Link) field in DocType 'VAT ID Check'
+#: erpnext_austria/erpnext_austria/doctype/business_letter/business_letter.json
+#: erpnext_austria/erpnext_austria/doctype/vat_id_check/vat_id_check.json
+#: erpnext_austria/erpnext_austria/report/summen__und_saldenliste/summen__und_saldenliste.js:9
+msgid "Company"
+msgstr ""
+
+#. Option for the 'Status' (Select) field in DocType 'VAT ID Check'
+#: erpnext_austria/erpnext_austria/doctype/vat_id_check/vat_id_check.json
+msgid "Completed"
+msgstr ""
+
+#. Label of the contact (Link) field in DocType 'Business Letter'
+#: erpnext_austria/erpnext_austria/doctype/business_letter/business_letter.json
+msgid "Contact"
+msgstr ""
+
+#. Label of the content (Text Editor) field in DocType 'Business Letter'
+#. Label of the content (Text Editor) field in DocType 'Business Letter
+#. Template'
+#: erpnext_austria/erpnext_austria/doctype/business_letter/business_letter.json
+#: erpnext_austria/erpnext_austria/doctype/business_letter_template/business_letter_template.json
+msgid "Content"
+msgstr ""
+
+#. Label of the content_preview (Text Editor) field in DocType 'Business
+#. Letter'
+#: erpnext_austria/erpnext_austria/doctype/business_letter/business_letter.json
+msgid "Content (Preview)"
+msgstr ""
+
+#: erpnext_austria/erpnext_austria/report/summen__und_saldenliste/summen__und_saldenliste.py:87
+msgid "Credit Closing Balance"
+msgstr ""
+
+#: erpnext_austria/erpnext_austria/report/summen__und_saldenliste/summen__und_saldenliste.py:45
+msgid "Credit Opening Balance"
+msgstr ""
+
+#: erpnext_austria/erpnext_austria/report/summen__und_saldenliste/summen__und_saldenliste.py:73
+msgid "Credit in {0}"
+msgstr ""
+
+#: erpnext_austria/erpnext_austria/report/summen__und_saldenliste/summen__und_saldenliste.py:59
+msgid "Credit until {0}"
+msgstr ""
+
+#: erpnext_austria/erpnext_austria/report/summen__und_saldenliste/summen__und_saldenliste.py:31
+msgid "Currency"
+msgstr ""
+
+#. Label of the date (Date) field in DocType 'Business Letter'
+#: erpnext_austria/erpnext_austria/doctype/business_letter/business_letter.json
+msgid "Date"
+msgstr ""
+
+#: erpnext_austria/erpnext_austria/report/summen__und_saldenliste/summen__und_saldenliste.py:80
+msgid "Debit Closing Balance"
+msgstr ""
+
+#: erpnext_austria/erpnext_austria/report/summen__und_saldenliste/summen__und_saldenliste.py:38
+msgid "Debit Opening Balance"
+msgstr ""
+
+#: erpnext_austria/erpnext_austria/report/summen__und_saldenliste/summen__und_saldenliste.py:66
+msgid "Debit in {0}"
+msgstr ""
+
+#: erpnext_austria/erpnext_austria/report/summen__und_saldenliste/summen__und_saldenliste.py:52
+msgid "Debit until {0}"
+msgstr ""
+
+#: erpnext_austria/erpnext_austria/report/summen__und_saldenliste/summen__und_saldenliste.js:40
+msgid "December"
+msgstr ""
+
+#. Label of the department (Link) field in DocType 'Business Letter'
+#: erpnext_austria/erpnext_austria/doctype/business_letter/business_letter.json
+msgid "Department"
+msgstr ""
+
+#. Name of a DocType
+#: erpnext_austria/erpnext_austria/doctype/erpnext_austria_settings/erpnext_austria_settings.json
+msgid "ERPNext Austria Settings"
+msgstr ""
+
+#. Label of the email_id (Data) field in DocType 'Business Letter'
+#: erpnext_austria/erpnext_austria/doctype/business_letter/business_letter.json
+msgid "Email"
+msgstr ""
+
+#. Label of the employee (Link) field in DocType 'Business Letter'
+#. Name of a role
+#: erpnext_austria/erpnext_austria/doctype/business_letter/business_letter.json
+msgid "Employee"
+msgstr ""
+
+#. Label of the employee_name (Data) field in DocType 'Business Letter'
+#: erpnext_austria/erpnext_austria/doctype/business_letter/business_letter.json
+msgid "Employee Name"
+msgstr ""
+
+#. Option for the 'Status' (Select) field in DocType 'VAT ID Check'
+#: erpnext_austria/erpnext_austria/doctype/vat_id_check/vat_id_check.json
+msgid "Error"
+msgstr ""
+
+#: erpnext_austria/erpnext_austria/report/summen__und_saldenliste/summen__und_saldenliste.js:30
+msgid "February"
+msgstr ""
+
+#: erpnext_austria/erpnext_austria/report/summen__und_saldenliste/summen__und_saldenliste.js:17
+msgid "Fiscal Year"
+msgstr ""
+
+#: erpnext_austria/erpnext_austria/doctype/vat_id_check/vat_id_check_list.js:8
+msgid "Invalid"
+msgstr ""
+
+#. Option for the 'Status' (Select) field in DocType 'VAT ID Check'
+#: erpnext_austria/erpnext_austria/doctype/vat_id_check/vat_id_check.json
+msgid "Invalid Input"
+msgstr ""
+
+#. Label of the is_valid (Check) field in DocType 'VAT ID Check'
+#: erpnext_austria/erpnext_austria/doctype/vat_id_check/vat_id_check.json
+msgid "Is Valid"
+msgstr ""
+
+#: erpnext_austria/erpnext_austria/report/summen__und_saldenliste/summen__und_saldenliste.js:29
+msgid "January"
+msgstr ""
+
+#: erpnext_austria/erpnext_austria/report/summen__und_saldenliste/summen__und_saldenliste.js:35
+msgid "July"
+msgstr ""
+
+#: erpnext_austria/erpnext_austria/report/summen__und_saldenliste/summen__und_saldenliste.js:34
+msgid "June"
+msgstr ""
+
+#. Label of the link_document_type (Link) field in DocType 'Business Letter'
+#: erpnext_austria/erpnext_austria/doctype/business_letter/business_letter.json
+msgid "Link Document Type"
+msgstr ""
+
+#. Label of the link_name (Dynamic Link) field in DocType 'Business Letter'
+#: erpnext_austria/erpnext_austria/doctype/business_letter/business_letter.json
+msgid "Link Name"
+msgstr ""
+
+#. Label of the link_title (Data) field in DocType 'Business Letter'
+#: erpnext_austria/erpnext_austria/doctype/business_letter/business_letter.json
+msgid "Link Title"
+msgstr ""
+
+#. Label of the template (Link) field in DocType 'Business Letter'
+#: erpnext_austria/erpnext_austria/doctype/business_letter/business_letter.json
+msgid "Load From Template"
+msgstr ""
+
+#: erpnext_austria/erpnext_austria/report/summen__und_saldenliste/summen__und_saldenliste.js:31
+msgid "March"
+msgstr ""
+
+#: erpnext_austria/erpnext_austria/report/summen__und_saldenliste/summen__und_saldenliste.js:33
+msgid "May"
+msgstr ""
+
+#: erpnext_austria/erpnext_austria/report/summen__und_saldenliste/summen__und_saldenliste.js:25
+msgid "Month"
+msgstr ""
+
+#: erpnext_austria/erpnext_austria/report/summen__und_saldenliste/summen__und_saldenliste.js:39
+msgid "November"
+msgstr ""
+
+#: erpnext_austria/erpnext_austria/report/summen__und_saldenliste/summen__und_saldenliste.js:38
+msgid "October"
+msgstr ""
+
+#: erpnext_austria/custom/sales.py:17
+msgid "Only the most recent {0} within the same series can be deleted to avoid gaps in numbering."
+msgstr ""
+
+#. Label of the party (Dynamic Link) field in DocType 'VAT ID Check'
+#: erpnext_austria/erpnext_austria/doctype/vat_id_check/vat_id_check.json
+msgid "Party"
+msgstr ""
+
+#. Label of the party_address (Link) field in DocType 'VAT ID Check'
+#: erpnext_austria/erpnext_austria/doctype/vat_id_check/vat_id_check.json
+msgid "Party Address"
+msgstr ""
+
+#. Label of the party_type (Link) field in DocType 'VAT ID Check'
+#: erpnext_austria/erpnext_austria/doctype/vat_id_check/vat_id_check.json
+msgid "Party Type"
+msgstr ""
+
+#. Label of the party_vat_id (Data) field in DocType 'VAT ID Check'
+#: erpnext_austria/erpnext_austria/doctype/vat_id_check/vat_id_check.json
+msgid "Party VAT ID"
+msgstr ""
+
+#. Option for the 'Status' (Select) field in DocType 'VAT ID Check'
+#: erpnext_austria/erpnext_austria/doctype/vat_id_check/vat_id_check.json
+#: erpnext_austria/erpnext_austria/doctype/vat_id_check/vat_id_check_list.js:10
+msgid "Planned"
+msgstr ""
+
+#. Label of the prevent_gaps_in_transaction_naming (Check) field in DocType
+#. 'ERPNext Austria Settings'
+#: erpnext_austria/erpnext_austria/doctype/erpnext_austria_settings/erpnext_austria_settings.json
+msgid "Prevent Gaps In Transaction Naming"
+msgstr ""
+
+#. Label of the preview_tab (Tab Break) field in DocType 'Business Letter'
+#: erpnext_austria/erpnext_austria/doctype/business_letter/business_letter.json
+msgid "Preview"
+msgstr ""
+
+#. Label of the recipient_column (Column Break) field in DocType 'Business
+#. Letter'
+#: erpnext_austria/erpnext_austria/doctype/business_letter/business_letter.json
+msgid "Recipient"
+msgstr ""
+
+#. Label of the reference_section (Section Break) field in DocType 'Business
+#. Letter'
+#: erpnext_austria/erpnext_austria/doctype/business_letter/business_letter.json
+msgid "Reference"
+msgstr ""
+
+#: erpnext_austria/custom_fields.py:45
+msgid "Register Court"
+msgstr ""
+
+#: erpnext_austria/custom_fields.py:13
+msgid "Register Information"
+msgstr ""
+
+#: erpnext_austria/custom_fields.py:33
+msgid "Register Number"
+msgstr ""
+
+#: erpnext_austria/custom_fields.py:20
+msgid "Register Type"
+msgstr ""
+
+#. Label of the request_id (Data) field in DocType 'VAT ID Check'
+#: erpnext_austria/erpnext_austria/doctype/vat_id_check/vat_id_check.json
+msgid "Request ID"
+msgstr ""
+
+#. Label of the section_break_xljfy (Section Break) field in DocType 'VAT ID
+#. Check'
+#: erpnext_austria/erpnext_austria/doctype/vat_id_check/vat_id_check.json
+msgid "Requester"
+msgstr ""
+
+#. Label of the requester_vat_id (Data) field in DocType 'VAT ID Check'
+#: erpnext_austria/erpnext_austria/doctype/vat_id_check/vat_id_check.json
+msgid "Requester VAT ID"
+msgstr ""
+
+#. Label of the section_break_dowxn (Section Break) field in DocType 'VAT ID
+#. Check'
+#: erpnext_austria/erpnext_austria/doctype/vat_id_check/vat_id_check.json
+msgid "Result"
+msgstr ""
+
+#. Option for the 'Status' (Select) field in DocType 'VAT ID Check'
+#: erpnext_austria/erpnext_austria/doctype/vat_id_check/vat_id_check.json
+#: erpnext_austria/erpnext_austria/doctype/vat_id_check/vat_id_check_list.js:12
+msgid "Running"
+msgstr ""
+
+#. Name of a role
+#: erpnext_austria/erpnext_austria/doctype/vat_id_check/vat_id_check.json
+msgid "Sales Manager"
+msgstr ""
+
+#. Name of a role
+#: erpnext_austria/erpnext_austria/doctype/vat_id_check/vat_id_check.json
+msgid "Sales Master Manager"
+msgstr ""
+
+#. Name of a role
+#: erpnext_austria/erpnext_austria/doctype/vat_id_check/vat_id_check.json
+msgid "Sales User"
+msgstr ""
+
+#. Label of the column_break_ybiq (Column Break) field in DocType 'Business
+#. Letter'
+#: erpnext_austria/erpnext_austria/doctype/business_letter/business_letter.json
+msgid "Sender"
+msgstr ""
+
+#: erpnext_austria/erpnext_austria/report/summen__und_saldenliste/summen__und_saldenliste.js:37
+msgid "September"
+msgstr ""
+
+#. Option for the 'Status' (Select) field in DocType 'VAT ID Check'
+#: erpnext_austria/erpnext_austria/doctype/vat_id_check/vat_id_check.json
+msgid "Service Unavailable"
+msgstr ""
+
+#. Label of the status (Select) field in DocType 'VAT ID Check'
+#: erpnext_austria/erpnext_austria/doctype/vat_id_check/vat_id_check.json
+msgid "Status"
+msgstr ""
+
+#. Label of the subject (Data) field in DocType 'Business Letter'
+#. Label of the subject (Data) field in DocType 'Business Letter Template'
+#: erpnext_austria/erpnext_austria/doctype/business_letter/business_letter.json
+#: erpnext_austria/erpnext_austria/doctype/business_letter_template/business_letter_template.json
+msgid "Subject"
+msgstr ""
+
+#. Label of the subject_preview (Data) field in DocType 'Business Letter'
+#: erpnext_austria/erpnext_austria/doctype/business_letter/business_letter.json
+msgid "Subject (Preview)"
+msgstr ""
+
+#. Name of a report
+#: erpnext_austria/erpnext_austria/report/summen__und_saldenliste/summen__und_saldenliste.json
+msgid "Summen- und Saldenliste"
+msgstr ""
+
+#. Name of a role
+#: erpnext_austria/erpnext_austria/doctype/business_letter/business_letter.json
+#: erpnext_austria/erpnext_austria/doctype/business_letter_template/business_letter_template.json
+#: erpnext_austria/erpnext_austria/doctype/erpnext_austria_settings/erpnext_austria_settings.json
+#: erpnext_austria/erpnext_austria/doctype/vat_id_check/vat_id_check.json
+msgid "System Manager"
+msgstr ""
+
+#: erpnext_austria/custom_fields.py:61 erpnext_austria/custom_fields.py:72
+msgid "Tax Exemption Reason"
+msgstr ""
+
+#: erpnext_austria/overrides.py:6
+msgid "Tax ID"
+msgstr ""
+
+#: erpnext_austria/overrides.py:7
+msgid "Tax Id"
+msgstr ""
+
+#: erpnext_austria/erpnext_austria/doctype/vat_id_check/vat_id_check.py:19
+#: erpnext_austria/erpnext_austria/doctype/vat_id_check/vat_id_check.py:26
+msgid "The VAT ID in {0} is invalid."
+msgstr ""
+
+#. Label of the trader_city (Data) field in DocType 'VAT ID Check'
+#: erpnext_austria/erpnext_austria/doctype/vat_id_check/vat_id_check.json
+msgid "Trader City"
+msgstr ""
+
+#. Label of the trader_city_match (Check) field in DocType 'VAT ID Check'
+#: erpnext_austria/erpnext_austria/doctype/vat_id_check/vat_id_check.json
+msgid "Trader City Match"
+msgstr ""
+
+#. Label of the trader_name (Data) field in DocType 'VAT ID Check'
+#: erpnext_austria/erpnext_austria/doctype/vat_id_check/vat_id_check.json
+msgid "Trader Name"
+msgstr ""
+
+#. Label of the trader_name_match (Check) field in DocType 'VAT ID Check'
+#: erpnext_austria/erpnext_austria/doctype/vat_id_check/vat_id_check.json
+msgid "Trader Name Match"
+msgstr ""
+
+#. Label of the trader_postcode (Data) field in DocType 'VAT ID Check'
+#: erpnext_austria/erpnext_austria/doctype/vat_id_check/vat_id_check.json
+msgid "Trader Postcode"
+msgstr ""
+
+#. Label of the trader_postcode_match (Check) field in DocType 'VAT ID Check'
+#: erpnext_austria/erpnext_austria/doctype/vat_id_check/vat_id_check.json
+msgid "Trader Postcode Match"
+msgstr ""
+
+#. Label of the trader_street (Data) field in DocType 'VAT ID Check'
+#: erpnext_austria/erpnext_austria/doctype/vat_id_check/vat_id_check.json
+msgid "Trader Street"
+msgstr ""
+
+#. Label of the trader_street_match (Check) field in DocType 'VAT ID Check'
+#: erpnext_austria/erpnext_austria/doctype/vat_id_check/vat_id_check.json
+msgid "Trader Street Match"
+msgstr ""
+
+#: erpnext_austria/erpnext_austria/doctype/business_letter/business_letter.js:47
+msgid "Unsaved changes. Save the document first to get a preview."
+msgstr ""
+
+#. Name of a DocType
+#: erpnext_austria/erpnext_austria/doctype/vat_id_check/vat_id_check.json
+msgid "VAT ID Check"
+msgstr ""
+
+#: erpnext_austria/erpnext_austria/doctype/vat_id_check/vat_id_check_list.js:7
+msgid "Valid"
+msgstr ""
+
+#: erpnext_austria/public/js/erpnext_austria/business_letter.js:7
+msgid "You can use {0} in the Subject and Content fields for dynamic values.<br><br>All address details are available under the <code>address</code> object (e.g., <code>{{ address.city }}</code>), contact details under the <code>contact</code> object (e.g., <code>{{ contact.first_name }}</code>), and any specific information related to the dynamically linked document under the <code>reference</code> object (e.g., <code>{{ reference.some_field }}</code>).<br><br>"
+msgstr ""
+
+#: erpnext_austria/erpnext_austria/doctype/business_letter/business_letter.py:49
+msgid "cancelled Business Letter {0}"
+msgstr ""
+
+#: erpnext_austria/erpnext_austria/doctype/business_letter/business_letter.py:42
+msgid "submitted Business Letter {0}"
+msgstr ""
+
