@@ -78,3 +78,19 @@ class TestParseVATID(unittest.TestCase):
 		country_code, vat_number = parse_vat_id("DE123+456*78.9")
 		self.assertEqual(country_code, "DE")
 		self.assertEqual(vat_number, "123+456*78.9")
+
+	def test_parse_vat_id_austria(self):
+		"""Test parsing Austrian VAT IDs (UID-Nummer)."""
+		country_code, vat_number = parse_vat_id("ATU37866403")
+		self.assertEqual(country_code, "AT")
+		self.assertEqual(vat_number, "U37866403")
+
+		# Test with spaces in VAT number (should be removed)
+		country_code, vat_number = parse_vat_id("ATU 3786 6403")
+		self.assertEqual(country_code, "AT")
+		self.assertEqual(vat_number, "U37866403")
+
+		# Test with lowercase (VIES rejects a lowercase "u")
+		country_code, vat_number = parse_vat_id("atu37866403")
+		self.assertEqual(country_code, "AT")
+		self.assertEqual(vat_number, "U37866403")

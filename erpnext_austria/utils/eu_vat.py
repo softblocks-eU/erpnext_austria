@@ -21,7 +21,7 @@ def parse_vat_id(vat_id: str) -> tuple[str, str]:
 	_vat_id = vat_id.replace(" ", "")
 
 	country_code = _vat_id[:2].upper()
-	vat_number = _vat_id[2:]
+	vat_number = _vat_id[2:].upper()
 
 	# check vat_number and country_code with regex
 	if not re.match(COUNTRY_CODE_REGEX, country_code):
