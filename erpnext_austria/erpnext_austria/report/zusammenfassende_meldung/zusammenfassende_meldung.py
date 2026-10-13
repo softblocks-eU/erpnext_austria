@@ -59,7 +59,8 @@ def get_statement_lines(invoices: list[dict]) -> tuple[list[dict], list[str]]:
 	invalid_invoices = []
 	for invoice in invoices:
 		vat_id = get_eu_vat_id(invoice["tax_id"])
-		if not vat_id:
+		# Northern Ireland belongs to the single market for goods only, not for services.
+		if not vat_id or (vat_id.startswith("XI") and invoice["zm_type"] == ZM_OTHER_SERVICE):
 			invalid_invoices.append(invoice["name"])
 			continue
 

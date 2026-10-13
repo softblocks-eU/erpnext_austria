@@ -142,11 +142,8 @@ def get_data(company: str, fy_start, month_start, month_end):
 
 	sum_in_month = (
 		frappe.qb.from_(gl_entry)
-		.left_join(account)
-		.on(gl_entry.account == account.name)
 		.select(
 			gl_entry.account,
-			gl_entry.account_currency,
 			Sum(gl_entry.debit_in_account_currency).as_("debit"),
 			Sum(gl_entry.credit_in_account_currency).as_("credit"),
 		)
@@ -157,21 +154,21 @@ def get_data(company: str, fy_start, month_start, month_end):
 			& (gl_entry.posting_date <= month_end)
 			& (gl_entry.voucher_type != "Period Closing Voucher")
 		)
-		.orderby(Cast(account.account_number, "int"))
-		.groupby(gl_entry.account, gl_entry.account_currency)
+		.groupby(gl_entry.account)
 	)
 
+	# Start from the accounts, so that accounts without entries in the month are included.
 	query = (
-		frappe.qb.from_(sum_in_month)
-		.left_join(sum_until_month)
-		.on(sum_until_month.account == sum_in_month.account)
+		frappe.qb.from_(account)
 		.left_join(opening_balance)
-		.on(opening_balance.account == sum_in_month.account)
-		.left_join(account)
+		.on(opening_balance.account == account.name)
+		.left_join(sum_until_month)
+		.on(sum_until_month.account == account.name)
+		.left_join(sum_in_month)
 		.on(sum_in_month.account == account.name)
 		.select(
-			sum_in_month.account,
-			sum_in_month.account_currency,
+			account.name,
+			account.account_currency,
 			opening_balance.debit,
 			opening_balance.credit,
 			sum_until_month.debit,
@@ -209,6 +206,18 @@ def get_data(company: str, fy_start, month_start, month_end):
 			)
 			.else_(None),
 		)
+		.where(
+			(account.company == company)
+			& (account.is_group == 0)
+			& (
+				opening_balance.debit.notnull()
+				| opening_balance.credit.notnull()
+				| sum_until_month.account.notnull()
+				| sum_in_month.account.notnull()
+			)
+		)
+		.orderby(Cast(account.account_number, "int"))
+		.orderby(account.name)
 	)
 
 	return query.run()
@@ -217,7 +226,12 @@ def get_data(company: str, fy_start, month_start, month_end):
 def get_dates(month: int, fiscal_year: str):
 	"""Returns the start and end date for the given month."""
 	fy_start: date = frappe.db.get_value("Fiscal Year", fiscal_year, "year_start_date")
-	month_start = fy_start.replace(month=month, day=1)
-	last_day_of_month = monthrange(month_start.year, month_start.month)[1]
-	month_end = month_start.replace(day=last_day_of_month)
-	return fy_start, month_start, month_end
+	return fy_start, *get_month_range(fy_start, month)
+
+
+def get_month_range(fy_start: date, month: int) -> tuple[date, date]:
+	"""Return the first and last day of the month within the fiscal year starting at fy_start."""
+	# In a fiscal year that does not start in January, the months before the start month
+	# belong to the next calendar year.
+	year = fy_start.year + 1 if month < fy_start.month else fy_start.year
+	return date(year, month, 1), date(year, month, monthrange(year, month)[1])

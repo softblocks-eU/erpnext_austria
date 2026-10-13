@@ -6,20 +6,21 @@ This app is based on [ERPNext Germany](https://github.com/alyf-de/erpnext_german
 
 ### Features
 
-- Validation of EU VAT IDs (UID-Nummer) of customers and suppliers, automatically every three months or manually
+- Validation of EU VAT IDs (UID-Nummer) of customers and suppliers, automatically every three months or manually. After a failed check, it is repeated sooner.
 - Allow deletion of the most recent sales transaction (per naming series and company) only. Applies to **Quotation**, **Sales Order** and **Sales Invoice**.
 - Restrict deletion of attachments to submitted transactions
 - Tax exemption reason in **Sales Taxes and Charges Template**, **Quotation**, **Sales Order** and **Sales Invoice**
-- Create **Business Letters** from a template and print or email them to your customers or suppliers
 - Report _Summen- und Saldenliste_
 - Report _Zusammenfassende Meldung_ (recapitulative statement) for FinanzOnline
+- Register details in **Company**, **Customer** and **Supplier**: company register number (Firmenbuchnummer) and court, or ZVR number for associations
+- Austrian terms in the German translation, e.g. "UID-Nummer" for the VAT ID
 
 ### Zusammenfassende Meldung
 
 The report lists the lines of the recapitulative statement (form U 13) for a month or quarter: one line per VAT ID and transaction type with the sum of the net amounts in whole Euro. You can enter these lines in FinanzOnline.
 
 1. Set the _Recapitulative Statement Type_ in each **Sales Taxes and Charges Template** you use for customers in other EU member states: _Intra-Community Supply_, _Other Service_ or _Triangular Transaction_.
-2. **Sales Invoices** take the type from their template. Only submitted invoices with a type and a VAT ID of another EU member state are included. Credit notes reduce the sum.
+2. **Sales Invoices** take the type from their template. Only submitted invoices with a type and a VAT ID of another EU member state are included. Northern Ireland (`XI`) counts for goods only, not for services. Credit notes reduce the sum.
 3. Open the report _Zusammenfassende Meldung_, select company, year and period.
 
 Simplifications:

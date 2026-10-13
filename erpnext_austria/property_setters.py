@@ -17,7 +17,6 @@ PROTECTED_FILE_DOCTYPES = (
 	"Asset Capitalization",
 	"POS Invoice",
 	"Dunning",
-	"Business Letter",
 	"Period Closing Voucher",
 	"Contract",
 	"Blanket Order",

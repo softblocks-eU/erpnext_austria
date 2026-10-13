@@ -23,4 +23,15 @@ frappe.ui.form.on("VAT ID Check", {
 			};
 		});
 	},
+	party: function (frm) {
+		if (!frm.doc.party_type || !frm.doc.party) {
+			return;
+		}
+
+		// customer_name or supplier_name
+		const name_field = `${frappe.scrub(frm.doc.party_type)}_name`;
+		frappe.db.get_value(frm.doc.party_type, frm.doc.party, name_field).then((r) => {
+			frm.set_value("trader_name", r.message[name_field]);
+		});
+	},
 });

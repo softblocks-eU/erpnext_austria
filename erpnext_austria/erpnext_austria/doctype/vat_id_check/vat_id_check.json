@@ -93,8 +93,6 @@
    "read_only": 1
   },
   {
-   "fetch_from": "customer.customer_name",
-   "fetch_if_empty": 1,
    "fieldname": "trader_name",
    "fieldtype": "Data",
    "in_list_view": 1,
@@ -102,7 +100,7 @@
    "set_only_once": 1
   },
   {
-   "fetch_from": "customer_address.address_line1",
+   "fetch_from": "party_address.address_line1",
    "fetch_if_empty": 1,
    "fieldname": "trader_street",
    "fieldtype": "Data",
@@ -110,7 +108,7 @@
    "set_only_once": 1
   },
   {
-   "fetch_from": "customer_address.pincode",
+   "fetch_from": "party_address.pincode",
    "fetch_if_empty": 1,
    "fieldname": "trader_postcode",
    "fieldtype": "Data",
@@ -118,7 +116,7 @@
    "set_only_once": 1
   },
   {
-   "fetch_from": "customer_address.city",
+   "fetch_from": "party_address.city",
    "fetch_if_empty": 1,
    "fieldname": "trader_city",
    "fieldtype": "Data",
@@ -207,8 +205,6 @@
    "set_only_once": 1
   },
   {
-   "fetch_from": "customer.tax_id",
-   "fetch_if_empty": 1,
    "fieldname": "party_vat_id",
    "fieldtype": "Data",
    "in_list_view": 1,
@@ -219,7 +215,7 @@
   }
  ],
  "links": [],
- "modified": "2024-06-11 10:14:55.846253",
+ "modified": "2026-10-13 12:00:00.000000",
  "modified_by": "Administrator",
  "module": "ERPNext Austria",
  "name": "VAT ID Check",

@@ -36,9 +36,6 @@ required_apps = ["frappe/erpnext"]
 # include js, css files in header of desk.html
 # app_include_css = "/assets/erpnext_austria/css/erpnext_austria.css"
 # app_include_js = "/assets/erpnext_austria/js/erpnext_austria.js"
-app_include_js = [
-	"erpnext_austria.bundle.js",
-]
 
 # include js, css files in header of web template
 # web_include_css = "/assets/erpnext_austria/css/erpnext_austria.css"
@@ -100,6 +97,10 @@ app_include_js = [
 
 # before_install = "erpnext_austria.install.before_install"
 after_install = "erpnext_austria.install.after_install"
+
+# Creates custom fields added in an update. Property setters are left out on purpose: they would
+# overwrite changes made by the user in Customize Form on every migration.
+after_migrate = "erpnext_austria.install.make_custom_fields"
 
 # Uninstallation
 # ------------

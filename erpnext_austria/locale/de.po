@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ERPNext Austria VERSION\n"
 "Report-Msgid-Bugs-To: contact@softblocks.at\n"
-"POT-Creation-Date: 2026-10-12 14:30+0000\n"
+"POT-Creation-Date: 2026-10-13 09:02+0000\n"
 "PO-Revision-Date: 2025-02-20 11:46+0100\n"
 "Last-Translator: contact@softblocks.at\n"
 "Language: de\n"
@@ -33,22 +33,11 @@ msgstr "Tatsächliche Adresse des Händlers"
 msgid "Actual Trader Name"
 msgstr "Tatsächlicher Name des Händlers"
 
-#. Label of the address (Link) field in DocType 'Business Letter'
-#. Label of the address_display (Small Text) field in DocType 'Business Letter'
-#: erpnext_austria/erpnext_austria/doctype/business_letter/business_letter.json
-msgid "Address"
-msgstr "Adresse"
-
 #. Description of the 'Prevent Gaps In Transaction Naming' (Check) field in
 #. DocType 'ERPNext Austria Settings'
 #: erpnext_austria/erpnext_austria/doctype/erpnext_austria_settings/erpnext_austria_settings.json
 msgid "Allow deletion of the most recent record only. Applies to <b>Quotation</b>, <b>Sales Order</b> and <b>Sales Invoice</b>."
 msgstr "Falls aktiviert, kann nur die neueste Transaktion vom Typ <b>Angebot</b>, <b>Verkaufsauftrag</b> und <b>Verkaufsrechnung</b> gelöscht werden."
-
-#. Label of the amended_from (Link) field in DocType 'Business Letter'
-#: erpnext_austria/erpnext_austria/doctype/business_letter/business_letter.json
-msgid "Amended From"
-msgstr "Korrektur von"
 
 #: erpnext_austria/erpnext_austria/report/summen__und_saldenliste/summen__und_saldenliste.js:32
 #: erpnext_austria/erpnext_austria/report/zusammenfassende_meldung/zusammenfassende_meldung.js:29
@@ -60,23 +49,11 @@ msgstr "April"
 msgid "August"
 msgstr "August"
 
-#. Name of a DocType
-#: erpnext_austria/erpnext_austria/doctype/business_letter/business_letter.json
-msgid "Business Letter"
-msgstr "Geschäftsbrief"
-
-#. Name of a DocType
-#: erpnext_austria/erpnext_austria/doctype/business_letter_template/business_letter_template.json
-msgid "Business Letter Template"
-msgstr "Geschäftsbriefvorlage"
-
 #: erpnext_austria/custom/sales.py:20
 msgid "Cannot delete this transaction"
 msgstr "Diese Transaktion kann nicht gelöscht werden"
 
-#. Label of the company (Link) field in DocType 'Business Letter'
 #. Label of the company (Link) field in DocType 'VAT ID Check'
-#: erpnext_austria/erpnext_austria/doctype/business_letter/business_letter.json
 #: erpnext_austria/erpnext_austria/doctype/vat_id_check/vat_id_check.json
 #: erpnext_austria/erpnext_austria/report/summen__und_saldenliste/summen__und_saldenliste.js:9
 #: erpnext_austria/erpnext_austria/report/zusammenfassende_meldung/zusammenfassende_meldung.js:8
@@ -87,25 +64,6 @@ msgstr "Unternehmen"
 #: erpnext_austria/erpnext_austria/doctype/vat_id_check/vat_id_check.json
 msgid "Completed"
 msgstr "Abgeschlossen"
-
-#. Label of the contact (Link) field in DocType 'Business Letter'
-#: erpnext_austria/erpnext_austria/doctype/business_letter/business_letter.json
-msgid "Contact"
-msgstr "Kontakt"
-
-#. Label of the content (Text Editor) field in DocType 'Business Letter'
-#. Label of the content (Text Editor) field in DocType 'Business Letter
-#. Template'
-#: erpnext_austria/erpnext_austria/doctype/business_letter/business_letter.json
-#: erpnext_austria/erpnext_austria/doctype/business_letter_template/business_letter_template.json
-msgid "Content"
-msgstr "Inhalt"
-
-#. Label of the content_preview (Text Editor) field in DocType 'Business
-#. Letter'
-#: erpnext_austria/erpnext_austria/doctype/business_letter/business_letter.json
-msgid "Content (Preview)"
-msgstr "Inhalt (Vorschau)"
 
 #: erpnext_austria/erpnext_austria/report/summen__und_saldenliste/summen__und_saldenliste.py:87
 msgid "Credit Closing Balance"
@@ -126,11 +84,6 @@ msgstr "Haben bis {0}"
 #: erpnext_austria/erpnext_austria/report/summen__und_saldenliste/summen__und_saldenliste.py:31
 msgid "Currency"
 msgstr "Währung"
-
-#. Label of the date (Date) field in DocType 'Business Letter'
-#: erpnext_austria/erpnext_austria/doctype/business_letter/business_letter.json
-msgid "Date"
-msgstr "Datum"
 
 #: erpnext_austria/erpnext_austria/report/summen__und_saldenliste/summen__und_saldenliste.py:80
 msgid "Debit Closing Balance"
@@ -153,31 +106,10 @@ msgstr "Soll bis {0}"
 msgid "December"
 msgstr "Dezember"
 
-#. Label of the department (Link) field in DocType 'Business Letter'
-#: erpnext_austria/erpnext_austria/doctype/business_letter/business_letter.json
-msgid "Department"
-msgstr "Abteilung"
-
 #. Name of a DocType
 #: erpnext_austria/erpnext_austria/doctype/erpnext_austria_settings/erpnext_austria_settings.json
 msgid "ERPNext Austria Settings"
 msgstr "ERPNext-Österreich-Einstellungen"
-
-#. Label of the email_id (Data) field in DocType 'Business Letter'
-#: erpnext_austria/erpnext_austria/doctype/business_letter/business_letter.json
-msgid "Email"
-msgstr "E-Mail"
-
-#. Label of the employee (Link) field in DocType 'Business Letter'
-#. Name of a role
-#: erpnext_austria/erpnext_austria/doctype/business_letter/business_letter.json
-msgid "Employee"
-msgstr "Mitarbeiter"
-
-#. Label of the employee_name (Data) field in DocType 'Business Letter'
-#: erpnext_austria/erpnext_austria/doctype/business_letter/business_letter.json
-msgid "Employee Name"
-msgstr "Name des Mitarbeiters"
 
 #. Option for the 'Status' (Select) field in DocType 'VAT ID Check'
 #: erpnext_austria/erpnext_austria/doctype/vat_id_check/vat_id_check.json
@@ -201,7 +133,7 @@ msgstr "Geschäftsjahr"
 msgid "Fourth Quarter"
 msgstr "4. Quartal"
 
-#: erpnext_austria/constants.py:61
+#: erpnext_austria/constants.py:60
 msgid "Intra-Community Supply"
 msgstr "Innergemeinschaftliche Lieferung"
 
@@ -238,26 +170,6 @@ msgstr "Juli"
 msgid "June"
 msgstr "Juni"
 
-#. Label of the link_document_type (Link) field in DocType 'Business Letter'
-#: erpnext_austria/erpnext_austria/doctype/business_letter/business_letter.json
-msgid "Link Document Type"
-msgstr "Verknüpfter Dokumenttyp"
-
-#. Label of the link_name (Dynamic Link) field in DocType 'Business Letter'
-#: erpnext_austria/erpnext_austria/doctype/business_letter/business_letter.json
-msgid "Link Name"
-msgstr "Verknüpftes Dokument"
-
-#. Label of the link_title (Data) field in DocType 'Business Letter'
-#: erpnext_austria/erpnext_austria/doctype/business_letter/business_letter.json
-msgid "Link Title"
-msgstr "Titel des verknüpften Dokuments"
-
-#. Label of the template (Link) field in DocType 'Business Letter'
-#: erpnext_austria/erpnext_austria/doctype/business_letter/business_letter.json
-msgid "Load From Template"
-msgstr "Aus Vorlage laden"
-
 #: erpnext_austria/erpnext_austria/report/summen__und_saldenliste/summen__und_saldenliste.js:31
 #: erpnext_austria/erpnext_austria/report/zusammenfassende_meldung/zusammenfassende_meldung.js:28
 msgid "March"
@@ -286,7 +198,7 @@ msgstr "Oktober"
 msgid "Only the most recent {0} within the same series can be deleted to avoid gaps in numbering."
 msgstr "Nur die neueste Transaktion vom Typ {0} innerhalb desselben Nummernkreises kann gelöscht werden, um Lücken in der Nummerierung zu vermeiden."
 
-#: erpnext_austria/constants.py:62
+#: erpnext_austria/constants.py:61
 msgid "Other Service"
 msgstr "Sonstige Leistung"
 
@@ -326,26 +238,9 @@ msgstr "Geplant"
 msgid "Prevent Gaps In Transaction Naming"
 msgstr "Lücken im Nummernkreis vermeiden"
 
-#. Label of the preview_tab (Tab Break) field in DocType 'Business Letter'
-#: erpnext_austria/erpnext_austria/doctype/business_letter/business_letter.json
-msgid "Preview"
-msgstr "Vorschau"
-
 #: erpnext_austria/custom_fields.py:77 erpnext_austria/custom_fields.py:97
 msgid "Recapitulative Statement Type"
 msgstr "ZM-Geschäftsart"
-
-#. Label of the recipient_column (Column Break) field in DocType 'Business
-#. Letter'
-#: erpnext_austria/erpnext_austria/doctype/business_letter/business_letter.json
-msgid "Recipient"
-msgstr "Empfänger"
-
-#. Label of the reference_section (Section Break) field in DocType 'Business
-#. Letter'
-#: erpnext_austria/erpnext_austria/doctype/business_letter/business_letter.json
-msgid "Reference"
-msgstr "Referenz"
 
 #: erpnext_austria/custom_fields.py:50
 msgid "Register Court"
@@ -410,12 +305,6 @@ msgstr "Vertriebsbenutzer"
 msgid "Second Quarter"
 msgstr "2. Quartal"
 
-#. Label of the column_break_ybiq (Column Break) field in DocType 'Business
-#. Letter'
-#: erpnext_austria/erpnext_austria/doctype/business_letter/business_letter.json
-msgid "Sender"
-msgstr ""
-
 #: erpnext_austria/erpnext_austria/report/summen__und_saldenliste/summen__und_saldenliste.js:37
 #: erpnext_austria/erpnext_austria/report/zusammenfassende_meldung/zusammenfassende_meldung.js:34
 msgid "September"
@@ -431,19 +320,7 @@ msgstr "Dienst nicht verfügbar"
 msgid "Status"
 msgstr "Status"
 
-#. Label of the subject (Data) field in DocType 'Business Letter'
-#. Label of the subject (Data) field in DocType 'Business Letter Template'
-#: erpnext_austria/erpnext_austria/doctype/business_letter/business_letter.json
-#: erpnext_austria/erpnext_austria/doctype/business_letter_template/business_letter_template.json
-msgid "Subject"
-msgstr "Betreff"
-
-#. Label of the subject_preview (Data) field in DocType 'Business Letter'
-#: erpnext_austria/erpnext_austria/doctype/business_letter/business_letter.json
-msgid "Subject (Preview)"
-msgstr "Betreff (Vorschau)"
-
-#: erpnext_austria/erpnext_austria/report/zusammenfassende_meldung/zusammenfassende_meldung.py:108
+#: erpnext_austria/erpnext_austria/report/zusammenfassende_meldung/zusammenfassende_meldung.py:109
 msgid "Sum of Taxable Amounts in Euro"
 msgstr "Summe der Bemessungsgrundlagen in Euro"
 
@@ -453,8 +330,6 @@ msgid "Summen- und Saldenliste"
 msgstr ""
 
 #. Name of a role
-#: erpnext_austria/erpnext_austria/doctype/business_letter/business_letter.json
-#: erpnext_austria/erpnext_austria/doctype/business_letter_template/business_letter_template.json
 #: erpnext_austria/erpnext_austria/doctype/erpnext_austria_settings/erpnext_austria_settings.json
 #: erpnext_austria/erpnext_austria/doctype/vat_id_check/vat_id_check.json
 msgid "System Manager"
@@ -472,16 +347,15 @@ msgstr "UID-Nummer"
 msgid "Tax Id"
 msgstr "UID-Nummer"
 
-#: erpnext_austria/erpnext_austria/doctype/vat_id_check/vat_id_check.py:19
-#: erpnext_austria/erpnext_austria/doctype/vat_id_check/vat_id_check.py:26
-msgid "The VAT ID in {0} is invalid."
-msgstr "Die UID-Nummer in {0} ist ungültig."
+#: erpnext_austria/erpnext_austria/doctype/vat_id_check/vat_id_check.py:58
+msgid "The VAT ID {0} of the company is invalid."
+msgstr "Die UID-Nummer {0} des Unternehmens ist ungültig."
 
-#: erpnext_austria/erpnext_austria/report/zusammenfassende_meldung/zusammenfassende_meldung.py:127
+#: erpnext_austria/erpnext_austria/report/zusammenfassende_meldung/zusammenfassende_meldung.py:128
 msgid "The currency of {0} is {1}. The recapitulative statement is reported in Euro."
 msgstr "Die Währung von {0} ist {1}. Die Zusammenfassende Meldung wird in Euro abgegeben."
 
-#: erpnext_austria/erpnext_austria/report/zusammenfassende_meldung/zusammenfassende_meldung.py:135
+#: erpnext_austria/erpnext_austria/report/zusammenfassende_meldung/zusammenfassende_meldung.py:136
 msgid "These invoices have a recapitulative statement type, but no VAT ID of another EU member state. They are not included: {0}"
 msgstr "Diese Rechnungen haben eine ZM-Geschäftsart, aber keine UID-Nummer eines anderen EU-Mitgliedstaats. Sie sind nicht enthalten: {0}"
 
@@ -529,15 +403,11 @@ msgstr "Straße des Händlers"
 msgid "Trader Street Match"
 msgstr "Straße des Händlers stimmt überein"
 
-#: erpnext_austria/constants.py:63
+#: erpnext_austria/constants.py:62
 msgid "Triangular Transaction"
 msgstr "Dreiecksgeschäft"
 
-#: erpnext_austria/erpnext_austria/doctype/business_letter/business_letter.js:47
-msgid "Unsaved changes. Save the document first to get a preview."
-msgstr "Ungespeicherte Änderungen. Speichern Sie das Dokument zuerst, um eine Vorschau zu erhalten."
-
-#: erpnext_austria/erpnext_austria/report/zusammenfassende_meldung/zusammenfassende_meldung.py:105
+#: erpnext_austria/erpnext_austria/report/zusammenfassende_meldung/zusammenfassende_meldung.py:106
 msgid "VAT ID"
 msgstr "UID-Nummer"
 
@@ -554,20 +424,8 @@ msgstr "Gültig"
 msgid "Year"
 msgstr ""
 
-#: erpnext_austria/public/js/erpnext_austria/business_letter.js:7
-msgid "You can use {0} in the Subject and Content fields for dynamic values.<br><br>All address details are available under the <code>address</code> object (e.g., <code>{{ address.city }}</code>), contact details under the <code>contact</code> object (e.g., <code>{{ contact.first_name }}</code>), and any specific information related to the dynamically linked document under the <code>reference</code> object (e.g., <code>{{ reference.some_field }}</code>).<br><br>"
-msgstr "Sie können in den Betreff- und Inhalt-Feldern {0} für dynamische Werte verwenden.<br><br>Alle Adressdetails sind unter dem <code>address</code>-Objekt verfügbar (z.B., <code>{{ address.city }}</code>), Kontaktdetails unter dem <code>contact</code>-Objekt (z.B., <code>{{ contact.first_name }}</code>), und jegliche spezifischen Informationen, die mit dem dynamisch verlinkten Dokument zusammenhängen, unter dem <code>reference</code>-Objekt (z.B., <code>{{ reference.some_field }}</code>).<br><br>"
-
 #. Name of a report
 #: erpnext_austria/erpnext_austria/report/zusammenfassende_meldung/zusammenfassende_meldung.json
 msgid "Zusammenfassende Meldung"
 msgstr ""
-
-#: erpnext_austria/erpnext_austria/doctype/business_letter/business_letter.py:49
-msgid "cancelled Business Letter {0}"
-msgstr "hat Geschäftsbrief {0} storniert"
-
-#: erpnext_austria/erpnext_austria/doctype/business_letter/business_letter.py:42
-msgid "submitted Business Letter {0}"
-msgstr "hat Geschäftsbrief {0} eingereicht"
 

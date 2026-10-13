@@ -33,15 +33,12 @@ def parse_vat_id(vat_id: str) -> tuple[str, str]:
 	return country_code, vat_number
 
 
-def check_vat(country_code: str, vat_number: str):
-	"""Use the EU VAT checker to validate a VAT ID."""
-	return Client(WSDL_URL).service.checkVat(vatNumber=vat_number, countryCode=country_code)
-
-
 @retry(
 	retry=retry_any(
 		retry_if_exception_message(message="GLOBAL_MAX_CONCURRENT_REQ"),
+		retry_if_exception_message(message="GLOBAL_MAX_CONCURRENT_REQ_TIME"),
 		retry_if_exception_message(message="MS_MAX_CONCURRENT_REQ"),
+		retry_if_exception_message(message="MS_MAX_CONCURRENT_REQ_TIME"),
 		retry_if_exception_message(message="SERVICE_UNAVAILABLE"),
 		retry_if_exception_message(message="MS_UNAVAILABLE"),
 		retry_if_exception_message(message="TIMEOUT"),

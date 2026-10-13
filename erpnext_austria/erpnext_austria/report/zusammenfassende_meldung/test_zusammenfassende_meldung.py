@@ -90,6 +90,12 @@ class TestZusammenfassendeMeldung(unittest.TestCase):
 		self.assertEqual(lines, [line("EL123456789", 100), line("XI123456789", 100)])
 		self.assertEqual(invalid, [])
 
+	def test_northern_ireland_other_service(self):
+		"""Northern Ireland belongs to the single market for goods only."""
+		lines, invalid = get_statement_lines([invoice("SI-1", "XI123456789", ZM_OTHER_SERVICE, 100)])
+		self.assertEqual(lines, [])
+		self.assertEqual(invalid, ["SI-1"])
+
 	def test_invalid_vat_ids(self):
 		"""Austrian, non-EU, malformed and missing VAT IDs are not reported."""
 		lines, invalid = get_statement_lines(
