@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ERPNext Austria VERSION\n"
 "Report-Msgid-Bugs-To: contact@softblocks.at\n"
-"POT-Creation-Date: 2026-10-13 09:12+0000\n"
-"PO-Revision-Date: 2026-10-13 09:12+0000\n"
+"POT-Creation-Date: 2026-10-13 10:18+0000\n"
+"PO-Revision-Date: 2026-10-13 10:18+0000\n"
 "Last-Translator: contact@softblocks.at\n"
 "Language-Team: contact@softblocks.at\n"
 "MIME-Version: 1.0\n"
@@ -16,7 +16,11 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.16.0\n"
 
-#: erpnext_austria/erpnext_austria/report/summen__und_saldenliste/summen__und_saldenliste.py:24
+#: erpnext_austria/erpnext_austria/doctype/vat_id_check/vat_id_check.py:21
+msgid "A VAT ID Check cannot be changed. Create a new one instead."
+msgstr ""
+
+#: erpnext_austria/erpnext_austria/report/summen__und_saldenliste/summen__und_saldenliste.py:26
 msgid "Account"
 msgstr ""
 
@@ -63,39 +67,39 @@ msgstr ""
 msgid "Completed"
 msgstr ""
 
-#: erpnext_austria/erpnext_austria/report/summen__und_saldenliste/summen__und_saldenliste.py:87
+#: erpnext_austria/erpnext_austria/report/summen__und_saldenliste/summen__und_saldenliste.py:89
 msgid "Credit Closing Balance"
 msgstr ""
 
-#: erpnext_austria/erpnext_austria/report/summen__und_saldenliste/summen__und_saldenliste.py:45
+#: erpnext_austria/erpnext_austria/report/summen__und_saldenliste/summen__und_saldenliste.py:47
 msgid "Credit Opening Balance"
 msgstr ""
 
-#: erpnext_austria/erpnext_austria/report/summen__und_saldenliste/summen__und_saldenliste.py:73
+#: erpnext_austria/erpnext_austria/report/summen__und_saldenliste/summen__und_saldenliste.py:75
 msgid "Credit in {0}"
 msgstr ""
 
-#: erpnext_austria/erpnext_austria/report/summen__und_saldenliste/summen__und_saldenliste.py:59
+#: erpnext_austria/erpnext_austria/report/summen__und_saldenliste/summen__und_saldenliste.py:61
 msgid "Credit until {0}"
 msgstr ""
 
-#: erpnext_austria/erpnext_austria/report/summen__und_saldenliste/summen__und_saldenliste.py:31
+#: erpnext_austria/erpnext_austria/report/summen__und_saldenliste/summen__und_saldenliste.py:33
 msgid "Currency"
 msgstr ""
 
-#: erpnext_austria/erpnext_austria/report/summen__und_saldenliste/summen__und_saldenliste.py:80
+#: erpnext_austria/erpnext_austria/report/summen__und_saldenliste/summen__und_saldenliste.py:82
 msgid "Debit Closing Balance"
 msgstr ""
 
-#: erpnext_austria/erpnext_austria/report/summen__und_saldenliste/summen__und_saldenliste.py:38
+#: erpnext_austria/erpnext_austria/report/summen__und_saldenliste/summen__und_saldenliste.py:40
 msgid "Debit Opening Balance"
 msgstr ""
 
-#: erpnext_austria/erpnext_austria/report/summen__und_saldenliste/summen__und_saldenliste.py:66
+#: erpnext_austria/erpnext_austria/report/summen__und_saldenliste/summen__und_saldenliste.py:68
 msgid "Debit in {0}"
 msgstr ""
 
-#: erpnext_austria/erpnext_austria/report/summen__und_saldenliste/summen__und_saldenliste.py:52
+#: erpnext_austria/erpnext_austria/report/summen__und_saldenliste/summen__und_saldenliste.py:54
 msgid "Debit until {0}"
 msgstr ""
 
@@ -236,6 +240,21 @@ msgstr ""
 msgid "Prevent Gaps In Transaction Naming"
 msgstr ""
 
+#. Name of a role
+#: erpnext_austria/erpnext_austria/doctype/vat_id_check/vat_id_check.json
+msgid "Purchase Manager"
+msgstr ""
+
+#. Name of a role
+#: erpnext_austria/erpnext_austria/doctype/vat_id_check/vat_id_check.json
+msgid "Purchase Master Manager"
+msgstr ""
+
+#. Name of a role
+#: erpnext_austria/erpnext_austria/doctype/vat_id_check/vat_id_check.json
+msgid "Purchase User"
+msgstr ""
+
 #: erpnext_austria/custom_fields.py:77 erpnext_austria/custom_fields.py:97
 msgid "Recapitulative Statement Type"
 msgstr ""
@@ -345,7 +364,7 @@ msgstr ""
 msgid "Tax Id"
 msgstr ""
 
-#: erpnext_austria/erpnext_austria/doctype/vat_id_check/vat_id_check.py:58
+#: erpnext_austria/erpnext_austria/doctype/vat_id_check/vat_id_check.py:67
 msgid "The VAT ID {0} of the company is invalid."
 msgstr ""
 

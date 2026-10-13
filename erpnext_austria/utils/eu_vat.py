@@ -18,7 +18,8 @@ VAT_NUMBER_REGEX = r"^[0-9A-Za-z\+\*\.]{2,12}$"
 
 
 def parse_vat_id(vat_id: str) -> tuple[str, str]:
-	_vat_id = vat_id.replace(" ", "")
+	# Copied VAT IDs can contain non-breaking spaces, tabs or line breaks.
+	_vat_id = "".join(vat_id.split())
 
 	country_code = _vat_id[:2].upper()
 	vat_number = _vat_id[2:].upper()

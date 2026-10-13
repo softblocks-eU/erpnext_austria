@@ -15,7 +15,16 @@ MATCH_VALID = "1"
 
 
 class VATIDCheck(Document):
+	def validate(self):
+		# The check is a record of the result of VIES. run_check sets the results with db_set.
+		if not self.is_new():
+			frappe.throw(_("A VAT ID Check cannot be changed. Create a new one instead."))
+
 	def before_insert(self):
+		# Only run_check sets the results. Values from the API are ignored.
+		for df in self.meta.get("fields", {"read_only": 1}):
+			self.set(df.fieldname, df.default)
+
 		# Invalid VAT IDs are kept as entered. run_check sets the status, so that saving a
 		# customer or the scheduler does not fail.
 		self.requester_vat_id = normalize_vat_id(self.requester_vat_id)

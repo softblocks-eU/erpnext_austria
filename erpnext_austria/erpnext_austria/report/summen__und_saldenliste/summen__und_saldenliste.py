@@ -13,7 +13,9 @@ from pypika.terms import Case
 
 def execute(filters=None):
 	fy_start, month_start, month_end = get_dates(int(filters.month), filters.fiscal_year)
-	current_month_name = format_date(month_start, format="MMMM", locale=frappe.local.lang)
+	# Babel expects "en_US" instead of "en-US".
+	locale = frappe.local.lang.replace("-", "_")
+	current_month_name = format_date(month_start, format="MMMM", locale=locale)
 	return get_columns(current_month_name), get_data(filters.company, fy_start, month_start, month_end)
 
 
@@ -118,7 +120,14 @@ def get_data(company: str, fy_start, month_start, month_end):
 			.as_("credit"),
 		)
 		.where(
-			(gl_entry.company == company) & (gl_entry.is_cancelled == 0) & (gl_entry.posting_date < fy_start)
+			(gl_entry.company == company)
+			& (gl_entry.is_cancelled == 0)
+			# Opening entries, e.g. when starting with ERPNext, belong to the opening balance.
+			# ERPNext allows them only for balance sheet accounts.
+			& (
+				(gl_entry.posting_date < fy_start)
+				| ((gl_entry.is_opening == "Yes") & (gl_entry.posting_date <= month_end))
+			)
 		)
 		.groupby(gl_entry.account)
 	)
@@ -136,6 +145,7 @@ def get_data(company: str, fy_start, month_start, month_end):
 			& (gl_entry.posting_date >= fy_start)
 			& (gl_entry.posting_date < month_start)
 			& (gl_entry.voucher_type != "Period Closing Voucher")
+			& (gl_entry.is_opening == "No")
 		)
 		.groupby(gl_entry.account)
 	)
@@ -153,6 +163,7 @@ def get_data(company: str, fy_start, month_start, month_end):
 			& (gl_entry.posting_date >= month_start)
 			& (gl_entry.posting_date <= month_end)
 			& (gl_entry.voucher_type != "Period Closing Voucher")
+			& (gl_entry.is_opening == "No")
 		)
 		.groupby(gl_entry.account)
 	)

@@ -94,3 +94,9 @@ class TestParseVATID(unittest.TestCase):
 		country_code, vat_number = parse_vat_id("atu37866403")
 		self.assertEqual(country_code, "AT")
 		self.assertEqual(vat_number, "U37866403")
+
+	def test_parse_vat_id_whitespace(self):
+		"""Copied VAT IDs can contain non-breaking spaces, tabs or a line break."""
+		for vat_id in ("ATU\xa037866403", "ATU\t37866403", "ATU37866403\n"):
+			with self.subTest(vat_id=vat_id):
+				self.assertEqual(parse_vat_id(vat_id), ("AT", "U37866403"))

@@ -45,3 +45,19 @@ class TestSummenUndSaldenlisteData(ERPNextAustriaTestSuite):
 		self.assertEqual(rows["_Test Bank - _TC"][8], 1000)
 		# Both
 		self.assertEqual(rows["_Test Cash - _TC"][8], -1500)
+
+
+class TestSummenUndSaldenlisteOpening(ERPNextAustriaTestSuite):
+	def test_opening_entries(self):
+		"""Opening entries belong to the opening balance, not to the entries of the month."""
+		journal_entry = make_journal_entry("Cash - _TC", "_Test Bank - _TC", 700, posting_date="2026-01-01")
+		journal_entry.is_opening = "Yes"
+		journal_entry.submit()
+		fiscal_year = frappe.db.get_value("Fiscal Year", {"year_start_date": "2026-01-01"})
+
+		_, data = execute(frappe._dict(company="_Test Company", fiscal_year=fiscal_year, month=1))
+
+		rows = {row[0]: row for row in data}
+		self.assertEqual(rows["Cash - _TC"][2], 700)
+		self.assertIsNone(rows["Cash - _TC"][6])
+		self.assertEqual(rows["Cash - _TC"][8], 700)

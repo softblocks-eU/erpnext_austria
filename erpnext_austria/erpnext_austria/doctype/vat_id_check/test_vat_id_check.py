@@ -6,6 +6,7 @@ from unittest.mock import patch
 
 import frappe
 from frappe.utils import add_to_date, now_datetime
+from requests.exceptions import RequestException
 
 from erpnext_austria.tasks import get_parties
 from erpnext_austria.tests.utils import ERPNextAustriaTestSuite
@@ -151,3 +152,44 @@ class TestVATIDCheck(ERPNextAustriaTestSuite):
 	def test_no_check_on_save_without_vat_id(self):
 		customer = frappe.get_doc({"doctype": "Customer", "customer_name": frappe.generate_hash()}).insert()
 		self.assertEqual(count_checks(customer.name), 0)
+
+	def test_check_on_reactivation(self):
+		"""A VAT ID changed while the customer was disabled is checked on reactivation."""
+		with patch(CHECK_VAT_APPROX, return_value=VIES_RESULT):
+			customer = frappe.get_doc(
+				{"doctype": "Customer", "customer_name": frappe.generate_hash(), "disabled": 1}
+			).insert()
+			customer.tax_id = "ATU37866403"
+			customer.save()
+			self.assertEqual(count_checks(customer.name), 0)
+
+			customer.disabled = 0
+			customer.save()
+			self.assertEqual(count_checks(customer.name), 1)
+
+	def test_results_from_api_are_ignored(self):
+		"""Results can only be set by the check itself."""
+		with patch(CHECK_VAT_APPROX, side_effect=RequestException):
+			check = frappe.get_doc(
+				{
+					"doctype": "VAT ID Check",
+					"party_type": "Customer",
+					"party": make_customer(),
+					"party_vat_id": "DE329035522",
+					"is_valid": 1,
+					"request_id": "FAKE",
+				}
+			).insert()
+
+		check.reload()
+		self.assertEqual(check.status, "Service Unavailable")
+		self.assertFalse(check.is_valid)
+		self.assertFalse(check.request_id)
+
+	def test_check_cannot_be_changed(self):
+		with patch(CHECK_VAT_APPROX, return_value=VIES_RESULT):
+			check = make_check(make_customer())
+
+		check.reload()
+		check.is_valid = 0
+		self.assertRaises(frappe.ValidationError, check.save)
