@@ -14,11 +14,14 @@ CHECK_VAT_APPROX = "erpnext_austria.erpnext_austria.doctype.vat_id_check.vat_id_
 
 
 def make_customer(tax_id="DE329035522"):
-	return (
-		frappe.get_doc({"doctype": "Customer", "customer_name": frappe.generate_hash(), "tax_id": tax_id})
-		.insert()
-		.name
-	)
+	"""Create a customer without a VAT ID Check. The VAT ID is set without hooks."""
+	customer = frappe.get_doc({"doctype": "Customer", "customer_name": frappe.generate_hash()}).insert()
+	frappe.db.set_value("Customer", customer.name, "tax_id", tax_id)
+	return customer.name
+
+
+def count_checks(customer):
+	return frappe.db.count("VAT ID Check", {"party_type": "Customer", "party": customer})
 
 
 def make_check(customer, requester_vat_id=None, party_vat_id="DE329035522"):
@@ -53,20 +56,22 @@ def is_due(customer):
 	return customer in [party[1] for party in get_parties("Customer", batch_size=10000)]
 
 
+VIES_RESULT = SimpleNamespace(
+	valid=True,
+	traderNameMatch="1",
+	traderStreetMatch="2",
+	traderPostcodeMatch="3",
+	traderCityMatch=None,
+	requestIdentifier="WAPI000001",
+	traderName="Test GmbH",
+	traderAddress="Teststraße 1",
+)
+
+
 class TestVATIDCheck(ERPNextAustriaTestSuite):
 	def test_match_codes(self):
 		"""Only "1" is a match. "2" means no match, "3" not processed."""
-		result = SimpleNamespace(
-			valid=True,
-			traderNameMatch="1",
-			traderStreetMatch="2",
-			traderPostcodeMatch="3",
-			traderCityMatch=None,
-			requestIdentifier="WAPI000001",
-			traderName="Test GmbH",
-			traderAddress="Teststraße 1",
-		)
-		with patch(CHECK_VAT_APPROX, return_value=result):
+		with patch(CHECK_VAT_APPROX, return_value=VIES_RESULT):
 			check = make_check(make_customer())
 
 		check.reload()
@@ -127,3 +132,22 @@ class TestVATIDCheck(ERPNextAustriaTestSuite):
 		add_past_check(customer, "Completed", months=-4)
 		add_past_check(customer, "Completed", days=-1)
 		self.assertFalse(is_due(customer))
+
+	def test_check_on_save(self):
+		"""Saving a customer checks a new or changed VAT ID at once."""
+		with patch(CHECK_VAT_APPROX, return_value=VIES_RESULT):
+			customer = frappe.get_doc(
+				{"doctype": "Customer", "customer_name": frappe.generate_hash(), "tax_id": "DE329035522"}
+			).insert()
+			self.assertEqual(count_checks(customer.name), 1)
+
+			customer.save()
+			self.assertEqual(count_checks(customer.name), 1)
+
+			customer.tax_id = "ATU37866403"
+			customer.save()
+			self.assertEqual(count_checks(customer.name), 2)
+
+	def test_no_check_on_save_without_vat_id(self):
+		customer = frappe.get_doc({"doctype": "Customer", "customer_name": frappe.generate_hash()}).insert()
+		self.assertEqual(count_checks(customer.name), 0)

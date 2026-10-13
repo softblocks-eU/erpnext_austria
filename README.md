@@ -6,7 +6,7 @@ This app is based on [ERPNext Germany](https://github.com/alyf-de/erpnext_german
 
 ### Features
 
-- Validation of EU VAT IDs (UID-Nummer) of customers and suppliers, automatically every three months or manually. After a failed check, it is repeated sooner.
+- Validation of EU VAT IDs (UID-Nummer) of customers and suppliers: at once when a new or changed VAT ID is saved, again every three months, or manually. After a failed check, it is repeated sooner.
 - Allow deletion of the most recent sales transaction (per naming series and company) only. Applies to **Quotation**, **Sales Order** and **Sales Invoice**.
 - Restrict deletion of attachments to submitted transactions
 - Tax exemption reason in **Sales Taxes and Charges Template**, **Quotation**, **Sales Order** and **Sales Invoice**

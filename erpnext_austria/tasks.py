@@ -71,24 +71,25 @@ def get_last_check_query(party_type: str):
 
 def check_some_parties():
 	"""Check VAT IDs of customers and suppliers whose last check is due for a repetition."""
-	requester_vat_id = None
+	for party in get_parties("Customer") + get_parties("Supplier"):
+		create_vat_id_check(*party)
+
+
+def create_vat_id_check(party_type, party, party_name, primary_address, vat_id):
+	"""Create a VAT ID Check for the party. The check itself runs in the background."""
+	doc = frappe.new_doc("VAT ID Check")
+	doc.party_type = party_type
+	doc.party = party
+	doc.trader_name = party_name
+	doc.party_vat_id = vat_id
 	if company := get_default_company():
-		requester_vat_id = frappe.get_cached_value("Company", company, "tax_id")
-
-	for party_type, party, party_name, primary_address, vat_id in get_parties("Customer") + get_parties(
-		"Supplier"
-	):
-		doc = frappe.new_doc("VAT ID Check")
-		doc.party_type = party_type
-		doc.party = party
-		doc.trader_name = party_name
-		doc.party_vat_id = vat_id
 		doc.company = company
-		doc.requester_vat_id = requester_vat_id
-		if primary_address:
-			address = frappe.get_doc("Address", primary_address)
-			doc.trader_street = address.address_line1
-			doc.trader_postcode = address.pincode
-			doc.trader_city = address.city
+		doc.requester_vat_id = frappe.get_cached_value("Company", company, "tax_id")
 
-		doc.insert(ignore_permissions=True)
+	if primary_address:
+		address = frappe.get_doc("Address", primary_address)
+		doc.trader_street = address.address_line1
+		doc.trader_postcode = address.pincode
+		doc.trader_city = address.city
+
+	doc.insert(ignore_permissions=True)

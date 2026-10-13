@@ -176,6 +176,12 @@ doc_events = {
 	"Sales Invoice": {
 		"on_trash": "erpnext_austria.custom.sales.on_trash",
 	},
+	"Customer": {
+		"on_update": "erpnext_austria.custom.party.on_update",
+	},
+	"Supplier": {
+		"on_update": "erpnext_austria.custom.party.on_update",
+	},
 }
 
 # Scheduled Tasks
